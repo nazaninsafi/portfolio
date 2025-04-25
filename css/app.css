@@ -1,0 +1,227 @@
+/* فونت‌ها */
+@font-face {
+    font-family: 'Vazir';
+    src: url('font/vazir/static/Vazirmatn-Medium.ttf') format('truetype')
+ 
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('font/vazir/static/Vazirmatn-Bold.ttf') format('truetype');
+   
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+/* استایل‌های پایه */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Vazir', sans-serif;
+}
+
+/* انیمیشن‌های سفارشی */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes flipLeft {
+    from {
+      transform: rotateY(-180deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  .zoom-in.visible {
+    animation: zoomIn 1s ease forwards;
+  }
+  
+  
+
+  .flip-left {
+    opacity: 0;
+    animation: flipLeft 2s ease forwards;
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+
+
+  .fade-right {
+    opacity: 0;
+    animation: fadeRight 1s ease forwards;
+  }
+
+  .fade-left {
+    opacity: 0;
+    animation: fadeLeft 1s ease forwards;
+  }
+  /* استایل‌های سفارشی */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* استایل‌های دارک مود */
+.dark .dark\:bg-gray-800 {
+    background-color: #1f2937;
+}
+
+.dark .dark\:bg-gray-900 {
+    background-color: #111827;
+}
+
+.dark .dark\:text-white {
+    color: #ffffff;
+}
+
+.dark .dark\:text-gray-300 {
+    color: #d1d5db;
+}
+
+.dark .dark\:text-gray-400 {
+    color: #9ca3af;
+}
+
+/* استایل‌های اضافی */
+.skill-progress {
+    transition: width 1s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* استایل دکمه اسکرول به بالا */
+#scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* استایل‌های انیمیشن منو */
+.mobile-menu-enter {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-enter-active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.mobile-menu-exit {
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-exit-active {
+    max-height: 0;
+    opacity: 0;
+}
+/* رنگ ها */
